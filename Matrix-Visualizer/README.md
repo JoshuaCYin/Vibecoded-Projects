@@ -25,26 +25,3 @@ When we apply a coordinate vector transformation mapping using standard Matrix M
 $f(x) = Ax$
 
 Our rendering class dynamically constructs a vanilla WebGL frame representation of this space, and iterates via a `requestAnimationFrame` loop to visually morph from an Identity State `I` to the new space formed by your `A` input over exactly $1500$ elapsed milliseconds. 
-
-## Deployment Instructions
-
-This repository is built using Vite, which yields blazing fast static sites that can be hosted elegantly for free.
-Since this application does not use declarative Single Page Routing (like `react-router`), there is no server-side fallback rule required.
-
-### 1. GitHub Pages
-GitHub Pages allows straightforward deployments for projects. 
-1. Push your code to a public repository on GitHub.
-2. Adjust `vite.config.js` to contain the property `base: "/Your-Repo-Name/"`
-3. Run `npm run build` and publish your `dist` folder to your `gh-pages` branch using a package like `gh-pages` (or trigger it automatically via Github actions!).
-
-### 2. Vercel
-1. Import this project's origin repository into Vercel.
-2. The Vercel system will detect the Vite template. 
-3. Build Command: `npm run build`
-4. Output Directory: `dist`
-5. Click **Deploy**.
-
-### 3. Netlify
-1. Connect via git on the Netlify platform.
-2. Wait for auto-discovery, ensure build script is `npm run build` and publish directory is `dist`.
-3. Click deploy. Netlify handles server setup effortlessly!
