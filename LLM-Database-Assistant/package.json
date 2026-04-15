@@ -1,0 +1,8 @@
+{
+  "name": "texttosql-netlify-functions",
+  "version": "1.0.0",
+  "description": "Dependencies strictly required for the Netlify Serverless API",
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}
