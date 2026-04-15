@@ -3,14 +3,16 @@ const os = require('os');
 const fs = require('fs');
 const path = require('path');
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
 exports.handler = async function(event, context) {
     if (event.httpMethod !== "POST") {
         return { statusCode: 405, body: "Method Not Allowed" };
     }
 
     try {
+        if (!process.env.OPENAI_API_KEY) {
+            return { statusCode: 500, body: JSON.stringify({ error: "Missing OpenAI API Key from backend environment variables!" }) };
+        }
+        const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
         const body = JSON.parse(event.body);
         let transcriptText = "";
 

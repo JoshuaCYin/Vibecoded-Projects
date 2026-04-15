@@ -149,7 +149,11 @@ export default function App() {
               })
           });
           
-          if (!res.ok) throw new Error("Serverless function failed.");
+          if (!res.ok) {
+              const errText = await res.text();
+              throw new Error(`HTTP ${res.status}: ${errText.substring(0, 100)}`);
+          }
+          
           const data = await res.json();
           
           setIsProcessing(false);
