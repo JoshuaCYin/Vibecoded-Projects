@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Database, Table, Check, Mic, Activity, Settings, Code, MessageSquare, X } from 'lucide-react';
 // @ts-ignore
 import initSqlJs from 'sql.js';
+// @ts-ignore
+import sqlWasmUrl from 'sql.js/dist/sql-wasm.wasm?url';
 
 interface DatabaseData {
   [tableName: string]: {
@@ -43,8 +45,8 @@ export default function App() {
   // 1. Initialize SQLite Database in the Browser!
   useEffect(() => {
     initSqlJs({
-        // Uses the wasm file we copied to /public
-        locateFile: (file: string) => `/${file}`
+        // Let Vite natively handle bundling and pathing for the production environment!
+        locateFile: () => sqlWasmUrl
     }).then((SQL: any) => {
         const localDb = new SQL.Database();
         // Seed Web Demo with dummy data
