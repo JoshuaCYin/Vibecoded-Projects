@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Database, Table, Check, Mic, Activity, Settings, Code, MessageSquare, X } from 'lucide-react';
+// @ts-ignore
 import initSqlJs from 'sql.js';
 
 interface DatabaseData {
@@ -43,8 +44,8 @@ export default function App() {
   useEffect(() => {
     initSqlJs({
         // Uses the wasm file we copied to /public
-        locateFile: file => `/${file}`
-    }).then(SQL => {
+        locateFile: (file: string) => `/${file}`
+    }).then((SQL: any) => {
         const localDb = new SQL.Database();
         // Seed Web Demo with dummy data
         localDb.exec(`
@@ -56,7 +57,7 @@ export default function App() {
         setDb(localDb);
         refreshDbViewer(localDb);
         setStatusMessage("Idle. (Push-To-Talk is Ready)");
-    }).catch(err => {
+    }).catch((err: any) => {
         setStatusMessage("Critical Error Loading SQLite WASM.");
         console.error(err);
     });
