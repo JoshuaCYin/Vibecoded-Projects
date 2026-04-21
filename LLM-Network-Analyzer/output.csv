@@ -1,2 +1,0 @@
-,src,dst,protoc,packets,bytes,duration,fwd_packets,bwd_packets,fwd_bytes,bwd_bytes
-0,192.168.1.12,100.22.64.195,TCP,1,54,0.0,1,0,54,0

@@ -1,9 +1,0 @@
-pandas
-scapy
-python-dotenv
-openai
-networkx
-matplotlib
-numpy
-pyvis
-streamlit
