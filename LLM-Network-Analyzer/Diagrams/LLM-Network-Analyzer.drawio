@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="PqpTgBhAysu0_DXdi152">
+    <mxGraphModel dx="1432" dy="345" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GlRTlbL8DdRZRW9yxTpU-7" edge="1" parent="1" source="GlRTlbL8DdRZRW9yxTpU-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="GlRTlbL8DdRZRW9yxTpU-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GlRTlbL8DdRZRW9yxTpU-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Packet Capture (sniff)" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="GlRTlbL8DdRZRW9yxTpU-8" edge="1" parent="1" source="GlRTlbL8DdRZRW9yxTpU-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="GlRTlbL8DdRZRW9yxTpU-4" value="If time flow not active &amp;gt; FLOW_TIMEOUT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GlRTlbL8DdRZRW9yxTpU-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Store/Update flows in memory (dict)" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GlRTlbL8DdRZRW9yxTpU-9" edge="1" parent="1" source="GlRTlbL8DdRZRW9yxTpU-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="GlRTlbL8DdRZRW9yxTpU-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GlRTlbL8DdRZRW9yxTpU-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Add flow to finished flows in memory" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="GlRTlbL8DdRZRW9yxTpU-10" edge="1" parent="1" source="GlRTlbL8DdRZRW9yxTpU-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="GlRTlbL8DdRZRW9yxTpU-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GlRTlbL8DdRZRW9yxTpU-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Finalize flow (add to finalized)" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="GlRTlbL8DdRZRW9yxTpU-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Pass to DF/DB/LLM" vertex="1">
+          <mxGeometry height="40" width="120" x="40" y="280" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
